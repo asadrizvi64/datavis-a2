@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DataVis - Assignment 2</title>
-    
-    Instead of this blank page, your beautiful visualizations should appear here :)
-    
+    <title>DataVis - Assignment 2: Multivariate Car Visualization</title>
+
     <!-- Loading d3js version 5-->
     <script src="d3.v5.min.js"></script>
-  
-    
-    <!-- Loading style.css; use if needed -->
-    <link rel="stylesheet" href="style.css">
 
+    <!-- Loading style.css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="container">
+        <h1>Interactive Car Dataset Visualization</h1>
+        <p class="subtitle">Click on any car to see detailed information and star plot</p>
 
-<!-- YOUR SOLUTION GOES HERE-->
+        <div class="visualization-wrapper">
+            <!-- Main scatterplot -->
+            <div id="scatterplot"></div>
 
+            <!-- Legend for car types -->
+            <div id="legend"></div>
 
-<!-- loading the main javascript file; implement logic there -->
-<script src="main.js"></script>
+            <!-- Detail panel for selected car -->
+            <div id="detail-panel" class="hidden">
+                <h3>Car Details</h3>
+                <div id="car-details"></div>
+                <div id="star-plot"></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- loading the main javascript file -->
+    <script src="main.js"></script>
 </body>
 </html>

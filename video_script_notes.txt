@@ -1,0 +1,178 @@
+================================================================================
+VIDEO SCRIPT NOTES - 1 MINUTE EXPLANATION
+================================================================================
+Assignment 2: Multivariate Car Visualization
+Maximum Duration: 60 seconds
+Required Format: 1080p, H.264, <50MB
+
+================================================================================
+SCRIPT OUTLINE (Timing: ~60 seconds total)
+================================================================================
+
+[0:00-0:10] INTRODUCTION (10 seconds)
+----------------------------------------
+"Hello! This is my interactive multivariate visualization of the cars dataset
+for DataVis Assignment 2. I've created a scatterplot that encodes four
+attributes simultaneously using different visual variables."
+
+VISUAL: Show the full visualization on screen
+TIP: Speak clearly and confidently
+
+
+[0:10-0:30] VISUAL VARIABLES EXPLANATION (20 seconds)
+------------------------------------------------------
+"The four visual variables I'm using are:
+
+1. POSITION X - Engine Size in liters on the horizontal axis
+2. POSITION Y - Horsepower on the vertical axis
+3. COLOR - Different colors represent car types: sedans, SUVs, sports cars,
+   and wagons
+4. SIZE - The size of each circle represents the retail price, so larger
+   circles are more expensive cars"
+
+VISUAL: Point to or highlight each visual variable as you mention it
+TIP: Use your mouse cursor or screen annotation to show what you're describing
+
+
+[0:30-0:45] INTERACTION DEMONSTRATION (15 seconds)
+---------------------------------------------------
+"The visualization is fully interactive. When you hover over a car, you see
+quick details. When you click on any car..."
+
+[CLICK ON A CAR]
+
+"...you can see detailed information including the car name, price, engine
+specs, and fuel efficiency. As a bonus feature, I've also included a star
+plot that visualizes six performance metrics in a radial layout."
+
+VISUAL: Actually click on a car and show the detail panel appearing
+TIP: Choose an interesting car (like a sports car or luxury vehicle)
+
+
+[0:45-0:60] INSIGHTS & CONCLUSION (15 seconds)
+-----------------------------------------------
+"This visualization reveals interesting patterns - for example, sports cars
+cluster in the high horsepower region, while more affordable sedans have
+smaller engines. The interactive design allows users to explore individual
+cars in detail while maintaining the overview of all relationships. Thank you!"
+
+VISUAL: Pan across the visualization or highlight a specific pattern
+TIP: End with a smile and clear conclusion
+
+================================================================================
+TECHNICAL TIPS FOR RECORDING
+================================================================================
+
+RECORDING SOFTWARE OPTIONS:
+- OBS Studio (free, open-source) - https://obsproject.com/
+- Loom (free tier available) - https://www.loom.com/
+- Windows Game Bar (Windows 10/11) - Press Win+G
+- macOS Screen Recording - Press Cmd+Shift+5
+- Zoom (record yourself presenting)
+
+VIDEO SETTINGS:
+- Resolution: 1920x1080 (1080p)
+- Frame rate: 30fps or 60fps
+- Codec: H.264
+- Format: MP4
+- Bitrate: Keep file under 50MB (usually 5-10 Mbps works)
+
+SCREEN SETUP:
+✓ Close unnecessary browser tabs and applications
+✓ Clear your desktop or use a clean background
+✓ Make sure your visualization is displayed at a good size
+✓ Test your screen recording before the final take
+✓ Ensure good lighting if showing yourself on camera
+
+AUDIO TIPS:
+✓ Record in a quiet room
+✓ Use a decent microphone (even phone earbuds are better than laptop mic)
+✓ Speak clearly and at a moderate pace
+✓ Do a test recording to check audio levels
+✓ Avoid background noise (turn off fans, AC, etc.)
+
+PRESENTATION TIPS:
+✓ Practice your script 2-3 times before recording
+✓ Time yourself to stay under 60 seconds
+✓ Use natural language, don't read robotically
+✓ Show enthusiasm about your work
+✓ Use your cursor to point at things you're describing
+✓ Make actual interactions (click, hover) rather than just talking about them
+
+================================================================================
+ALTERNATIVE SCRIPT (More Technical Focus)
+================================================================================
+
+If you prefer a more technical explanation:
+
+"This D3.js visualization uses multiple visual channels to encode four
+dimensions: position-x for engine displacement, position-y for horsepower,
+hue for categorical vehicle type, and area for price. The design follows
+Bertin's visual variables theory, utilizing both quantitative and categorical
+encodings. Interactive features include hover tooltips for quick reference and
+click-based detail views with a bonus radial star plot showing normalized
+performance metrics across six dimensions. The visualization demonstrates
+strong positive correlation between engine size and horsepower, with distinct
+clusters emerging for different vehicle types."
+
+(This is more academic and uses data visualization terminology)
+
+================================================================================
+COMMON MISTAKES TO AVOID
+================================================================================
+
+✗ DON'T go over 60 seconds - trim your content if needed
+✗ DON'T just read text on screen - demonstrate and interact
+✗ DON'T speak too fast - viewers need time to follow
+✗ DON'T forget to show the actual interactions working
+✗ DON'T use poor quality audio - it's harder to fix later
+✗ DON'T leave debug console or errors visible on screen
+✗ DON'T forget to mention all 4 visual variables clearly
+
+================================================================================
+EXPORT SETTINGS REFERENCE
+================================================================================
+
+For OBS Studio:
+- Output Mode: Simple
+- Video Bitrate: 5000 Kbps
+- Encoder: Hardware (if available) or x264
+- Recording Format: mp4
+- Audio Bitrate: 160
+
+For Handbrake (if you need to compress):
+- Preset: Fast 1080p30
+- Video Codec: H.264
+- Quality: RF 22-24
+- Keep file under 50MB
+
+================================================================================
+CHECKLIST BEFORE SUBMITTING
+================================================================================
+
+□ Video is exactly 60 seconds or less
+□ Resolution is 1920x1080 (1080p)
+□ File format is MP4 with H.264 codec
+□ File size is under 50MB
+□ Audio is clear and audible
+□ All 4 visual variables are clearly explained
+□ Interaction is demonstrated (not just described)
+□ No personal information or unwanted content visible
+□ Video plays correctly from start to finish
+□ Tested on a different computer/device
+
+================================================================================
+GOOD LUCK!
+================================================================================
+
+Remember: The goal is to clearly explain your visual encoding choices and
+demonstrate the interactive features. Keep it simple, clear, and professional.
+You've built something great - now show it off!
+
+If you're nervous about recording:
+- Remember it's only 60 seconds
+- You can do multiple takes
+- Practice makes perfect
+- Your work speaks for itself
+
+================================================================================
