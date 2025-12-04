@@ -3,7 +3,7 @@
 This repository contains the solution for Assignment 2 of the DataVis course at TU Dresden, focusing on multivariate data visualization.
 
 ## Team Members
-- [Your Name Here - Please update this section with your actual team member names]
+- Syed Muhammad Asad
 
 ## Project Description
 
