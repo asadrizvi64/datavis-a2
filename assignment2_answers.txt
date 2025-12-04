@@ -1,0 +1,204 @@
+================================================================================
+DATAVIS ASSIGNMENT 2 - PART 2: SCATTERPLOT MATRIX THEORY
+================================================================================
+
+Student/Team: [Your Name(s) Here]
+Date: December 4, 2025
+Repository: [Your GitHub Pages URL will go here]
+
+================================================================================
+QUESTION 1: MAIN PRINCIPLE OF SCATTERPLOT MATRICES
+================================================================================
+
+A scatterplot matrix (SPLOM) is a multivariate data visualization technique that
+displays pairwise relationships between multiple variables in a dataset. The main
+principle is to arrange multiple scatterplots in a grid format, where:
+
+1. LAYOUT STRUCTURE:
+   - Each row and column represents a different attribute/variable
+   - The intersection of row i and column j shows a scatterplot of variable i
+     (y-axis) versus variable j (x-axis)
+   - The diagonal typically shows the distribution of each single variable
+     (histograms, density plots, or variable names)
+
+2. KEY CHARACTERISTICS:
+   - Provides a comprehensive overview of all pairwise relationships
+   - The matrix is symmetric: the plot at position (i,j) is a mirror/transpose
+     of the plot at position (j,i) - same data but axes are swapped
+   - Allows quick identification of correlations, clusters, and patterns across
+     multiple dimensions
+
+3. PURPOSE:
+   - Exploratory data analysis to understand relationships between variables
+   - Identifying potential correlations (positive, negative, or none)
+   - Detecting outliers and unusual patterns across multiple dimensions
+   - Selecting variables for further detailed analysis
+
+================================================================================
+QUESTION 2: NUMBER OF SCATTERPLOTS FOR n ATTRIBUTES
+================================================================================
+
+FORMULA:
+
+For n attributes, the total number of cells in the matrix = n × n = n²
+
+However, we need to consider which cells contain actual scatterplots:
+
+1. FULL MATRIX (including diagonal and both triangles):
+   Total cells = n²
+
+2. EXCLUDING DIAGONAL:
+   Number of scatterplots = n² - n = n(n - 1)
+
+   This counts both upper and lower triangles (mirrored plots)
+
+3. UNIQUE SCATTERPLOTS (excluding diagonal, counting only one triangle):
+   Number of unique scatterplots = n(n - 1) / 2
+
+EXPLANATION:
+- The diagonal (n cells) shows single-variable distributions, not scatterplots
+- The upper triangle and lower triangle each contain n(n-1)/2 scatterplots
+- These are mirror images of each other (axes swapped)
+- For truly unique pairwise comparisons, we only need one triangle
+
+EXAMPLES:
+- n = 3 attributes: 3(3-1)/2 = 3 unique scatterplots (or 6 if counting mirrors)
+- n = 5 attributes: 5(5-1)/2 = 10 unique scatterplots (or 20 if counting mirrors)
+- n = 10 attributes: 10(10-1)/2 = 45 unique scatterplots (or 90 if counting mirrors)
+
+Most commonly, when people ask "how many scatterplots," they mean:
+→ n(n - 1) / 2 unique pairwise relationships
+
+================================================================================
+QUESTION 3: SKETCH OF SCATTERPLOT MATRIX
+================================================================================
+
+See attached file: scatterplot_matrix_sketch.png
+
+The sketch shows a 3×3 scatterplot matrix using three cars from the dataset:
+- Attributes: Horsepower, MPG (City), and Engine Size
+- Three example cars: Acura MDX, BMW M3, and Toyota Prius (or similar)
+- Each cell shows the relationship between two attributes for these three cars
+
+The sketch demonstrates:
+✓ Diagonal showing attribute names/distributions
+✓ Upper and lower triangles showing mirrored scatterplots
+✓ Three data points (cars) plotted in each scatterplot
+✓ Axis labels for each plot
+✓ How to read relationships between attributes
+
+================================================================================
+QUESTION 4: ADVANTAGES AND DISADVANTAGES OF SCATTERPLOT MATRICES
+================================================================================
+
+ADVANTAGES:
+-----------
+
+1. COMPREHENSIVE OVERVIEW:
+   ✓ Shows all pairwise relationships at once
+   ✓ Provides a holistic view of the entire dataset
+   ✓ No need to create individual plots one by one
+
+2. CORRELATION DETECTION:
+   ✓ Easy to spot positive/negative correlations across multiple variable pairs
+   ✓ Quick identification of which variables are related
+   ✓ Helps in feature selection for machine learning models
+
+3. PATTERN RECOGNITION:
+   ✓ Clusters and groupings become visible across multiple dimensions
+   ✓ Outliers can be identified in multiple contexts
+   ✓ Non-linear relationships are visible
+
+4. SPACE EFFICIENCY:
+   ✓ Compact representation of many relationships
+   ✓ Better than creating separate individual scatterplots
+   ✓ Symmetric structure reduces redundancy (can show only one triangle)
+
+5. COMPARATIVE ANALYSIS:
+   ✓ Easy to compare the strength of different relationships
+   ✓ Can quickly determine which pairs have the strongest associations
+   ✓ Supports hypothesis generation and testing
+
+6. STANDARDIZED LAYOUT:
+   ✓ Familiar and intuitive structure
+   ✓ Easy to navigate once you understand the principle
+   ✓ Works well for exploratory data analysis
+
+
+DISADVANTAGES:
+--------------
+
+1. SCALABILITY ISSUES:
+   ✗ Becomes cluttered and unreadable with many attributes (typically >7-10)
+   ✗ Number of plots grows quadratically: n² cells total
+   ✗ Individual scatterplots become too small to read details
+   ✗ Example: 15 attributes = 225 cells = overwhelming
+
+2. SCREEN REAL ESTATE:
+   ✗ Requires significant display space
+   ✗ May not work well on small screens or mobile devices
+   ✗ Individual plots lose detail when matrix is large
+   ✗ Hard to print effectively on standard paper
+
+3. OVERPLOTTING IN LARGE DATASETS:
+   ✗ With thousands of data points, individual plots become dense black masses
+   ✗ Hard to see patterns when points overlap extensively
+   ✗ May need transparency, sampling, or hexbin alternatives
+
+4. LIMITED DIMENSIONALITY:
+   ✗ Only shows 2D projections of potentially higher-dimensional relationships
+   ✗ Cannot encode additional variables simultaneously (unlike single scatterplots
+      that can use size, color, shape)
+   ✗ Misses complex interactions between 3+ variables
+
+5. COGNITIVE LOAD:
+   ✗ Difficult for users to compare patterns across many small plots
+   ✗ Eye must jump between different plots to synthesize information
+   ✗ Easy to miss important relationships in the visual clutter
+   ✗ Overwhelming for non-expert users
+
+6. REDUNDANCY:
+   ✗ Lower triangle duplicates upper triangle (mirrored)
+   ✗ While this provides confirmation, it also wastes space
+   ✗ Some implementations only show one triangle, but this can be confusing
+
+7. TEMPORAL/SEQUENTIAL DATA:
+   ✗ Doesn't naturally show time series or sequential patterns
+   ✗ No indication of the order in which data points occur
+   ✗ Better visualizations exist for temporal data
+
+8. CATEGORICAL VARIABLES:
+   ✗ Less effective when many variables are categorical
+   ✗ Scatterplots work best with continuous numerical data
+   ✗ Alternative visualizations needed for mixed data types
+
+
+BEST USE CASES:
+---------------
+- Initial exploratory analysis of medium-sized datasets (4-10 variables)
+- Datasets with primarily continuous numerical variables
+- When you need to quickly identify which variable pairs to investigate further
+- Academic and research settings where comprehensive overview is needed
+
+WHEN TO AVOID:
+--------------
+- More than 10-12 variables (too cluttered)
+- Very large datasets (millions of points) without sampling
+- Data with many categorical variables
+- When specific hypotheses need detailed single-plot analysis
+- Mobile or small-screen presentations
+
+================================================================================
+CONCLUSION
+================================================================================
+
+Scatterplot matrices are powerful tools for exploratory data analysis and
+understanding multivariate relationships. They work best with moderate numbers of
+continuous variables and medium-sized datasets. For our car dataset with 13
+attributes, a SPLOM would be at the upper limit of usability - which is why
+choosing 4 key attributes for our interactive scatterplot was a better approach
+for detailed analysis.
+
+================================================================================
+END OF ANSWERS
+================================================================================
